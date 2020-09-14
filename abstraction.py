@@ -1,5 +1,3 @@
-
-
 import numpy as np
 import pandas as pd
 import re
@@ -208,9 +206,6 @@ class Attention(Layer):
 
         base_config = super(Capsule, self).get_config()
         return dict(list(base_config.items()) + list(config.items()))
-
-
-
 
 
 data=pd.read_csv("Reviews.csv",nrows=100000)
@@ -514,9 +509,6 @@ for i in range(len(x_val)):
   print("Original summary:",seq2summary(y_val[i]))
   print("Predicted summary:",decode_sequence(x_val[i].reshape(1,max_len_text)))
   print("\n")
-
-
-
 
 
 
